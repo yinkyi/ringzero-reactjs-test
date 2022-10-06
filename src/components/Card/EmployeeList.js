@@ -67,7 +67,7 @@ const EmployeeList = () =>{
     
 
     return(
-        <Container>
+        <Container style={{"background":"gainsboro"}}>
             <Row className="text-center">
                 <Col><span className={classes["first-title"]}>ringzero test</span></Col>
             </Row>
@@ -81,7 +81,7 @@ const EmployeeList = () =>{
                     ))
               }
             </Row> 
-            <Row className="text-center pt-2">
+            <Row className="text-center pt-5 pb-4">
                 <Col> <Button className={classes["btn-load-more"]}>Load more</Button></Col>
             </Row> 
         </Container>

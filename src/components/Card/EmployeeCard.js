@@ -7,7 +7,7 @@ const EmployeeCard = (props) =>{
     
     return(
         <Col sm={6} md={4} lg={3}>
-            <Card className="mt-4">
+            <Card className="mt-4" style={{'borderColor':"light" }}>
                 <Card.Header className={`${classes["card-header"]} ${type === "Employee" ? classes['blue-header'] : classes['green-header']}`}>
                     <Image src={img} style={{"width":"30px","paddingRight":"5px"}}/>
                     <span>{type} {type === "Employee"?id:''}</span>
