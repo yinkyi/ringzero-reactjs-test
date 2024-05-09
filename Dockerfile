@@ -1,5 +1,5 @@
 from node:latest
 WORKDIR /apps
-ADD ..
+ADD . .
 RUN npm install
 CMD ["npm","run","start"]
