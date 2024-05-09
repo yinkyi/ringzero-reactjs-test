@@ -1,6 +1,8 @@
 pipeline {
-     agent {
-        docker 'node20:latest'
+    agent {
+        docker { 
+            image 'node:20.11.1-alpine3.19' 
+        }
     }
     stages {
         stage('Checkout'){
@@ -10,7 +12,6 @@ pipeline {
         }
         stage('Test'){
             steps{
-                sh 'node --version'
                 sh 'npm test'
             }
         }
