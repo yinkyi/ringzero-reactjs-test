@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    tools {dockerTool 'docker'}
+    tools {nodejs 'nodejs'}
     stages {
         stage('Checkout'){
             steps{
@@ -8,13 +8,8 @@ pipeline {
             }
         }
         stage('Test'){
-             agent {
-                docker {
-                  image 'node:20'
-                 reuseNode true
-                }
-              }
             steps{
+                sh 'npm install'
                 sh 'npm test'
             }
         }
