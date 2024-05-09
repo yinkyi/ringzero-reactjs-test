@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+     agent {
+        docker { image 'node:20.11.1-alpine3.19' }
+    }
     stages {
         stage('Checkout'){
             steps{
@@ -8,7 +10,7 @@ pipeline {
         }
         stage('Test'){
             steps{
-                sh 'echo 1111 | sudo -S apt install npm'
+                sh 'node --version'
                 sh 'npm test'
             }
         }
