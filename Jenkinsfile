@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker { 
-            image 'node:20.11.1-alpine3.19' 
-        }
-    }
+    agent any
     stages {
         stage('Checkout'){
             steps{
@@ -11,6 +7,12 @@ pipeline {
             }
         }
         stage('Test'){
+             agent {
+                docker {
+                  image 'node:20-alpine'
+                 reuseNode true
+                }
+              }
             steps{
                 sh 'npm test'
             }
