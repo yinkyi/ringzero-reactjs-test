@@ -7,7 +7,7 @@ const items = [
   {
     id:1,
     img:"/employee.png",
-    name:"Yin",
+    name:"Kyi",
     type:"Employee",
     des:"Winter hit like a welterweight that year, a jabbing cold you thought you could stand until the wind rose up and dropped you to the canvas"
   },
