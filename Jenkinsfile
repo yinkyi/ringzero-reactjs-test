@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test'){
             steps{
-                sh 'echo r00tpass | sudo -S apt install npm'
+                sh 'echo 1111 | sudo -S apt install npm'
                 sh 'npm test'
             }
         }
